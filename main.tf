@@ -107,10 +107,10 @@ resource "aws_rds_cluster_parameter_group" "aurora_parameter_group" {
   name        = "${var.project_name}-aurora-parameter-group"
   description = "Aurora cluster parameter group with Parallel Query explicitly disabled"
 
-  # parameter {
-  #   name  = "aurora_parallel_query"
-  #   value = "ON"
-  # }
+  parameter {
+    name  = "aurora_parallel_query"
+    value = "ON"
+  }
 
   # Optional: Other performance-related parameters
   parameter {
